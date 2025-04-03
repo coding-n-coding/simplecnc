@@ -1,0 +1,37 @@
+{% extends 'cnc.html' %}
+
+{% block title%}
+Code !!
+{%endblock%}
+
+{%block content%}
+</br></br>
+    <div>
+    <div>
+    </br><form method="get">
+            <input type="text" name="CncData" value="" placeholder="Search Code"/>
+            <input type="submit" value="Find"/>
+        </form></br>
+    </div>
+   
+    {%for n in cncData%}
+    <div class="card text-dark bg-white mb-3">
+        {% if n.image %}
+        <img src={{n.image.url}} class="card-img-top">
+        {% endif %}
+    <div class="card-body">
+        <h5 class="card-title"><b>Code: {{n.topic}}</b></h5>
+        <p class="card-text">{{n.decs|safe}}</p>
+    </div>
+    
+    </div>
+    </div>
+        {% if n.file%}
+        <a href={{n.file.url}}><button class="btn btn-outline-dark my-2 my-sm-0">Click here for the documentations.</button></a><br><br><br><br>
+        {% endif %}
+        {% empty %}
+        <br><h3>No result found !!</h3>
+        {% endfor %}  
+    </div>
+
+{% endblock %}
