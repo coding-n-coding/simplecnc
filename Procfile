@@ -1,1 +1,1 @@
-web: gunicorn simplecnc.wsgi:application
+web: gunicorn simplecnc.wsgi.application
