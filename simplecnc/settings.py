@@ -128,6 +128,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
+CSRF_TRUSTED_ORIGINS = ["https://simplecnc-1.onrender.com"]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
