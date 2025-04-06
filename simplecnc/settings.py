@@ -26,8 +26,7 @@ SECRET_KEY = 'django-insecure-9@q7_%(pkh9($%qvpgd)^k8i)77e5pqdb)$j0(!lqr_t&g(4)*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["ALLOWED_HOSTS = ["https://simplecnc-1.onrender.com", "localhost", "127.0.0.1"]
-
+ALLOWED_HOSTS = ["simplecnc-1.onrender.com", "localhost", "127.0.0.1"]
 
 # Application definitionsimplecnc.onrender.com
 
@@ -50,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'simplecnc.urls'
@@ -118,15 +118,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# Static files settings
+STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR,  "staticfiles")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
 
 CSRF_TRUSTED_ORIGINS = ["https://simplecnc-1.onrender.com"]
 
