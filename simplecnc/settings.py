@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9@q7_%(pkh9($%qvpgd)^k8i)77e5pqdb)$j0(!lqr_t&g(4)*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["simplecnc-1.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["192.168.1.138"]
 
 # Application definitionsimplecnc.onrender.com
 
