@@ -24,15 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9@q7_%(pkh9($%qvpgd)^k8i)77e5pqdb)$j0(!lqr_t&g(4)*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
 DEBUG = True
-=======
-DEBUG = False
 
-ALLOWED_HOSTS = ["simplecnc-1.onrender.com", "localhost", "127.0.0.1"]
->>>>>>> 335e82dc05f7cf122fca12f9362cd37fa5735356
-
-ALLOWED_HOSTS = ["192.168.1.138"]
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definitionsimplecnc.onrender.com
 
@@ -124,7 +118,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-<<<<<<< HEAD
 
 # Static files settings
 STATIC_URL = "/static/"
@@ -135,16 +128,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-=======
-import os
-
-# Static files settings
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
->>>>>>> 335e82dc05f7cf122fca12f9362cd37fa5735356
 
 
 CSRF_TRUSTED_ORIGINS = ["https://simplecnc-1.onrender.com"]
