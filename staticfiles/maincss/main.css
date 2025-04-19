@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and Layout */
+body {
+    background-color: #faf6f6;
+    color: #157746;
+    line-height: 1.6;
+    margin-top: 60px; /* Prevent content from hiding behind fixed navbar */
+}
+
+/* Header */
+header {
+    background-color: #157746;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.lnk {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.lnk a {
+    color: rgb(162, 203, 161);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.lnk a:hover {
+    list-style-type: none;
+    color: #f4f4f4;
+}
+
+/* Parallax Sections */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.parallax h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.parallax p {
+    font-size: 1.5rem;
+}
+
+/* Content Section */
+.content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #157746;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Mobile and Tablet Media Queries */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+        background-color: #157746;
+    }
+
+    .nav-links.active {
+        display: flex;    background-image: url('/imgs/imgs/1.jpeg');
+
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+/* Mobile-Specific Adjustments */
+@media (max-width: 480px) {
+    .navbar .logo a {
+        font-size: 1.5rem;
+    }
+
+    .nav-links a {
+        font-size: 1rem;
+    }
+
+    .parallax h1 {
+        font-size: 2.5rem;
+    }
+
+    .parallax p {
+        font-size: 1.2rem;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1.2rem;
+    }
+}
+
